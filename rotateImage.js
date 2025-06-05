@@ -13,7 +13,6 @@ var rotate = function (matrix) {
   for (let i = 0; i < n; i++) {
     matrix[i].reverse();
   }
-  return matrix;
 };
 
 const test1 = rotate([
