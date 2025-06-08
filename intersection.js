@@ -5,9 +5,18 @@
  */
 
 var intersection = function (nums1, nums2) {
-  const set1 = new Set(nums1);
-  const set2 = new Set(nums2);
-  return Array.from(new Set([...set1].filter((x) => set2.has(x))));
+  if (nums1.length > nums2.length) {
+    [nums1, nums2] = [nums2, nums1];
+  }
+  const result = [];
+  const set = new Set(nums1);
+  for (const num of nums2) {
+    if (set.has(num)) {
+      result.push(num);
+      set.delete(num);
+    }
+  }
+  return result;
 };
 
 const test1 = {
