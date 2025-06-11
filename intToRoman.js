@@ -30,3 +30,6 @@ var intToRoman = function (num) {
 
   return result;
 };
+
+console.log(intToRoman(3749)); //MMMDCCXLIX
+console.log(intToRoman(58)); //LVIII
